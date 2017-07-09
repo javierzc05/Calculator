@@ -58,7 +58,12 @@ namespace WpfApplication2
                     result = (number1 * number2).ToString();
                     break;
                 case "/":
-                    result = (number1 / number2).ToString();
+                    {
+                        if (number2 != 0)
+                            result = (number1 / number2).ToString();
+                        else
+                            result = "0";
+                    }
                     break;
             }
             number1 = Convert.ToInt64(result);
